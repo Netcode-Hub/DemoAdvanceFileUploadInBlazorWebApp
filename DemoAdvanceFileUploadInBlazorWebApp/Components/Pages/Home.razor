@@ -1,0 +1,13 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<Upload Content="GetContent" />
+
+<Preview PreviewContent="fileModel" ShowOthers=true/>
+<h1>@fileModel.Error</h1>
+@code{
+    FileModel fileModel = new();
+    void GetContent(FileModel fm) => fileModel = fm; 
+}
+
+
